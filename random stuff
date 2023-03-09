@@ -1,0 +1,43 @@
+import random
+
+# Define a class for Countryball
+class Countryball:
+    def __init__(self, name, flag, anthem, accessories):
+        self.name = name
+        self.flag = flag
+        self.anthem = anthem
+        self.accessories = accessories
+        self.power = random.randint(1, 10)
+    
+    def __str__(self):
+        return f"{self.name} - {self.flag} - {self.anthem} - {self.accessories}"
+    
+    def increase_power(self):
+        self.power += random.randint(1, 5)
+    
+    def decrease_power(self):
+        self.power -= random.randint(1, 5)
+
+# Define a list of flags and anthems
+flags = ["🇺🇸", "🇨🇳", "🇷🇺", "🇬🇧", "🇫🇷", "🇩🇪", "🇮🇳"]
+anthems = ["The Star-Spangled Banner", "March of the Volunteers", "National Anthem of Russia", "God Save the Queen", "La Marseillaise", "Deutschlandlied", "Jana-gana-mana"]
+
+# Define a list of accessories
+accessories = ["🎩", "👓", "🧢", "🕶️", "👑", "🎓"]
+# Can't find a pagri
+
+# Create two instances of Countryball
+country1 = Countryball("USA", random.choice(flags), random.choice(anthems), random.choice(accessories))
+country2 = Countryball("China", random.choice(flags), random.choice(anthems), random.choice(accessories))
+
+# Print out the Countryballs
+print(country1)
+print(country2)
+
+# Increase or decrease power of the Countryballs
+country1.increase_power()
+country2.decrease_power()
+
+# Print out the Countryballs after power changes
+print(country1)
+print(country2)
